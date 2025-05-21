@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta property="fc:frame" content="vNext">
+    <meta property="fc:frame:image" content="https://bottov.github.io/tic-tac-simple/board.png">
+    
+    <!-- Кнопки с ссылками (имитация ходов) -->
+    <meta property="fc:frame:button:1" content="1" action="link" target="https://bottov.github.io/tic-tac-simple/?move=1">
+    <meta property="fc:frame:button:2" content="2" action="link" target="https://bottov.github.io/tic-tac-simple/?move=2">
+    <meta property="og:image" content="https://bottov.github.io/tic-tac-simple/board.png">
+    
+    <script>
+        // Парсим ход из URL
+        const params = new URLSearchParams(window.location.search);
+        const move = params.get('move');
+        
+        if (move) {
+            // Здесь можно добавить логику игры (но для примера просто показываем ход)
+            alert(`Вы выбрали клетку ${move}. Это демо — реальная игра требует сервера.`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Крестики-нолики (демо)</h1>
+    <p>Это статический Frame. Для полной версии нужен Vercel/Netlify.</p>
+</body>
+</html>
